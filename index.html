@@ -5,20 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Quiz</title>
     <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css" />
-    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="./assets/styles.css" />
    
 </head>
 <body>
    <div class="container-hs">
     <header>
         <div>
-            <a href="/higscore.html"><button class="highscore-header"id="view-high-score">View High Scores</button></a>
+            <a href="./view-highscore.html"><button class="highscore-header"id="high-score">View High Scores</button></a>
         </div>
+        <p> Time: <span id="timer">0</span></p>
+</div>
 
     </header>
+    <main class="quiz-content">
+        <div id="quiz-begin-box">
+            <h1>Code Quiz Challenge</h1>
+    <p>Try to answer the following code-related questions within the time limit. <br/>Keep in minf that incorrect answers will penalize your score/time <br />by ten seconds.</p>
+            <button id="start-quiz">Start Quiz</button>
+        </div>
 
 
-   </div> 
-    
+        <!--from here-->
+        <div class="hide" id="end-quiz">
+            <h2>All Done!</h2>
+            <p>Your final score is:<span id="score-final"></span></p>
+            <p>Please enter your name:
+                <input type="text" id="name" max="4">
+                <button id="submission">Submit</button>
+            </p>
+            
+
+        </div>
+        
+    </main>
+
+   
+    <script src="./assets/script.js"></script>
 </body>
 </html>
