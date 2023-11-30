@@ -7,6 +7,70 @@ body {
     flex-direction: column;
 
 }
-#top {
+.container-hs{
+    position: absolute;
+    top: 2px;
+    left: 0%;
+    width: 50%;
+}
+#quiz-begin-box{
+justify-content: center;
+}
+.quiz-content {
+    margin: 104px auto 0 auto; 
+    max-width: 600px;
+    padding: 20px; 
+    background-color: #f4f4f4; 
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    text-align: center; 
+    font-family: Arial, sans-serif;
+    position: absolute;
+    right: -100px;
+}
+.scores{
+    margin: 104px auto 0 auto; 
+    max-width: 600px;
+    padding: 20px; 
+    background-color: #f4f4f4; 
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    text-align: center; 
+    font-family: Arial, sans-serif;
+    position: absolute;
+    right: 600px;
+}
+p {
+    margin: 25px 30px;
+}
+#cqh1 {
 color: rgb(221, 54, 221);
+}
+button{
+    display: inline-block;
+    padding: 30px;
+    color: #ffffff;
+    background-color: #7a5286;
+    border-radius: 10px;
+}
+
+.timer{
+    position: absolute;
+    top: 20px;
+    right: -250px;
+}
+.highscore-header{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.hide {
+    display: none;
+}
+ol {
+    padding: 10px;
+}
+li {
+    padding: 10px;
 }

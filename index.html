@@ -14,17 +14,21 @@
         <div>
             <a href="./view-highscore.html"><button class="highscore-header"id="high-score">View High Scores</button></a>
         </div>
+        <div class="timer">
         <p> Time: <span id="timer">0</span></p>
 </div>
 
     </header>
     <main class="quiz-content">
         <div id="quiz-begin-box">
-            <h1>Code Quiz Challenge</h1>
+            <h1 id="cqh1">Code Quiz Challenge</h1>
     <p>Try to answer the following code-related questions within the time limit. <br/>Keep in minf that incorrect answers will penalize your score/time <br />by ten seconds.</p>
             <button id="start-quiz">Start Quiz</button>
         </div>
-
+        <div class="hide" id="questions">
+            <h2 id="question-text"></h2>
+            <div id="answers"></div> 
+        </div>
 
         <!--from here-->
         <div class="hide" id="end-quiz">
@@ -40,7 +44,7 @@
         
     </main>
 
-   
+   </div>
     <script src="./assets/script.js"></script>
 </body>
 </html>
