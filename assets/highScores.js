@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function(){
 var questions = [ 
 	{ 
 		prompt: `Which of these is not a comparison operator in JavaScript?`, 
@@ -135,4 +136,5 @@ function questionClick() {
             quizEnd();
         }
     }
-startBtn.onclick = quizStart;
+startBtn.addEventListeneron("click", quizStart);
+});
