@@ -62,31 +62,24 @@ var questions = [
 }, 
 ];
 // selecting elements 
-var[
-    questionE1,
-    timerE1,
-    choicesE1,
-    submitBtn,
-    startBtn,
-    nameE1,
-    goback
-] =[
-    "#questions",
-    "#timer",
-    "#answers",
-    "#submission",
-    "#start-quiz",
-    "#name",
-    "goback-selector"
-]
-.map(selector => document.querySelector(selector));
-let [currentQuestionIndex, time, timerId] = [0, questions.length * 15, null];
+var questionE1 = document.getElementById("questions")
+var timerE1 = document.getElementById("timer")
+var choicesE1 = document.getElementById("answers")
+var submitBtn = document.getElementById("submission")
+var startBtn = document.getElementById("start-quiz")
+var nameE1 = document.getElementById("name")
+var goback = document.getElementById("goback-selector")
+
+var currentQuestionIndex = 0;
+var time = questions.length *15;
+var timerId = null;
+
 
 // function to start the quiz
 function quizStart() {
     timerId = setInterval(clockTick, 1000);
     timerE1.textContent = time;
-    var landingScreenE1 = document.getElementById("start-screen");
+    var landingScreenE1 = document.getElementById("start-quiz");
     landingScreenE1.classList.add("hide");
     questionE1.classList.remove("hide");
     getQuestion();
@@ -113,10 +106,33 @@ function questionClick() {
         questions[currentQuestionIndex].answer
     ) {
         time -= 10;
-        
+        if (time < 0) {
+            time = 0;
+        }
+        timerE1.textContent = time;
+    }
+    currentQuestionIndex++;
+    if (currentQuestionIndex === questions.length) {
+        quizEnd();
+    } else {
+        getQuestion();
+    }
+    }
+    function quizEnd() {
+        clearInterval(timerId);
+        let endScreenE1 = document.getElementById("quiz-end");
+        endScreenE1.classList.remove("hide");
+        let finalScoreE1 = document.getElementById("score-final");
+        finalScoreE1.textContent = time;
+        questionsE1.classList.add("hide");
+
     }
 
-
-
-
-}
+    function clockTick(){
+        time--;
+        timerE1.textContent = time;
+        if (time <= 0) {
+            quizEnd();
+        }
+    }
+startBtn.onclick = quizStart;
