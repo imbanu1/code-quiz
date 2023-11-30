@@ -63,16 +63,16 @@ var questions = [
 }, 
 ];
 // selecting elements 
-var questionE1 = document.getElementById("questions")
-var timerE1 = document.getElementById("timer")
-var choicesE1 = document.getElementById("answers")
-var submitBtn = document.getElementById("submission")
-var startBtn = document.getElementById("start-quiz")
-var nameE1 = document.getElementById("name")
-var goback = document.getElementById("goback-selector")
+var questionE1 = document.getElementById("questions");
+var timerE1 = document.getElementById("timer");
+var choicesE1 = document.getElementById("answers");
+var submitBtn = document.getElementById("submission");
+var startBtn = document.getElementById("start-quiz");
+var nameE1 = document.getElementById("name");
+var goback = document.getElementById("goback-selector");
 
 var currentQuestionIndex = 0;
-var time = questions.length *15;
+var time = questions.length * 15;
 var timerId = null;
 
 
@@ -80,7 +80,7 @@ var timerId = null;
 function quizStart() {
     timerId = setInterval(clockTick, 1000);
     timerE1.textContent = time;
-    var landingScreenE1 = document.getElementById("start-quiz");
+    var landingScreenE1 = document.getElementById("quiz-begin-box");
     landingScreenE1.classList.add("hide");
     questionE1.classList.remove("hide");
     getQuestion();
