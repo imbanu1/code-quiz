@@ -3,7 +3,7 @@ https://imbanu1.github.io/code-quiz/
 https://github.com/imbanu1/code-quiz
 GIVEN I am taking a code quiz
 WHEN I click the start button
-![image1]https://github.com/imbanu1/code-quiz/blob/main/assets/images/code-quiz-1.png?raw=true
+![image1](https://github.com/imbanu1/code-quiz/blob/main/assets/images/code-quiz-1.png?raw=true)
 THEN a timer starts and I am presented with a question
 ![image2]https://github.com/imbanu1/code-quiz/blob/main/assets/images/code-quiz-2.png?raw=true
 WHEN I answer a question
