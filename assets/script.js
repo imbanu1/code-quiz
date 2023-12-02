@@ -31,11 +31,7 @@ question1 = {
 
 ];
 
-let hello = document.getElementById('hello');
-
-
-hello.append('Ho Ho Ho')
-//create a function generates this array and appends its values on the htrml
+//create a function generates this array and appends its values on the html
 
 //you can add a  display:hidden or display:visible css onto this div
 //css .hidden{ display:hidden}
